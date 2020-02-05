@@ -1,7 +1,7 @@
-grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 menu_item{
@@ -12,13 +12,12 @@ menu_item{
 }
 
 eye_l{
-
+  text-align: right;
 }
 
 eye_r{
   grid-column-start: 3;
   grid-column-end: 3;
-  text-align: right;
 }
 
 hand_l{
