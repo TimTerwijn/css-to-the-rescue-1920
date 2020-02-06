@@ -46,6 +46,15 @@ plate{
   margin-top: 111px;
 }
 
+burger{
+  align-self: end;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  margin-top: 111px;
+}
+
 hand_r{
   justify-self: end;
   align-self: center;
