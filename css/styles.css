@@ -48,12 +48,12 @@ burgerContainer{
 }
 
 burgerContainer:hover burger{
-  animation: rotate 10s linear 1;
+  animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
 
 burgerContainer:hover plate{
-  animation: rotate 10s linear 1;
+  animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
 
@@ -63,11 +63,6 @@ burgerContainer:hover hand_r{
 
 burgerContainer:hover hand_l{
   margin-left: -10px;
-}
-
-@keyframes rotate{
-  from {transform: rotate(0deg); }
-  to {transform: rotate(360deg); }
 }
 
 hand_l{
@@ -96,6 +91,11 @@ hand_r{
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
+}
+
+@keyframes rotate{
+  from {transform: rotate(0deg); }
+  to {transform: rotate(360deg); }
 }
 
 @media (max-width: 460px) {
