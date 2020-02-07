@@ -35,6 +35,7 @@ hand_l{
   grid-row-start: 3;
   grid-row-end: 3;
   margin-top: 111px;
+  z-index: 1000;
 }
 
 plate{
@@ -46,6 +47,18 @@ plate{
   margin-top: 111px;
 }
 
+burger:hover{
+  animation: rotate 10s linear 1;
+  animation-play-state: running;
+}
+
+@keyframes rotate{
+  from {transform: rotate(0deg); }
+  to {transform: rotate(360deg); }
+}
+
+
+
 burger{
   align-self: end;
   grid-column-start: 2;
@@ -53,6 +66,7 @@ burger{
   grid-row-start: 3;
   grid-row-end: 3;
   margin-top: 111px;
+  z-index: 999;
 }
 
 hand_r{
@@ -63,4 +77,5 @@ hand_r{
   grid-row-start: 3;
   grid-row-end: 3;
   margin-top: 111px;
+  z-index: 1000;
 }
