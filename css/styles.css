@@ -57,6 +57,14 @@ burgerContainer:hover plate{
   animation-play-state: running;
 }
 
+burgerContainer:hover hand_r{
+  margin-right: -10px;
+}
+
+burgerContainer:hover hand_l{
+  margin-left: -10px;
+}
+
 @keyframes rotate{
   from {transform: rotate(0deg); }
   to {transform: rotate(360deg); }
