@@ -1,89 +1,77 @@
-body {
+body { /* the grit */
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   place-items: center;
 }
 
-menu_item{
+body div{ /* each item you can buy */
   display: grid;
   grid-template-columns: auto 120px auto;
   grid-template-rows: auto auto;
   background-color: brown;
 }
 
-eye_l{
+div h1{ /* left eye */
   text-align: right;
+  margin: 0;
 }
 
-eye_r{
+div h2{ /* right eye */
   grid-column-start: 3;
   grid-column-end: 3;
+  margin: 0;
 }
 
-face{
+div h3{ /* face */
   align-self: top;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: span 3;
+  margin: 0;
 }
 
-plate{
-  align-self: end;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-burgerContainer{
+div div{ /* burger container */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  margin-top: 111px;
+  margin: 0;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 3;
 }
 
-burgerContainer:hover burger{
-  animation: rotate 10s linear infinite;
-  animation-play-state: running;
-}
-
-burgerContainer:hover plate{
-  animation: rotate 10s linear infinite;
-  animation-play-state: running;
-}
-
-burgerContainer:hover hand_r{
-  margin-right: -10px;
-}
-
-burgerContainer:hover hand_l{
-  margin-left: -10px;
-}
-
-hand_l{
-  align-self: center;
-  z-index: 1000;
+div div h1{ /* SVG plate */
+  align-self: end;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
+  margin: 0;
 }
 
-burger{
+div div h2{ /* food */
   align-self: end;
   z-index: 999;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
+  margin: 0;
 }
 
-hand_r{
+div div h3{ /* hand l */
+  align-self: center;
+  z-index: 1000;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin: 0;
+}
+
+div div h4{ /* hand r */
   justify-self: end;
   align-self: center;
   z-index: 1000;
@@ -91,6 +79,24 @@ hand_r{
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
+}
+
+div div:hover h2{ /* hover food */
+  animation: rotate 10s linear infinite;
+  animation-play-state: running;
+}
+
+div div:hover h1{ /* hover plate */
+  animation: rotate 10s linear infinite;
+  animation-play-state: running;
+}
+
+div div:hover h4{ /* hover hand R */
+  margin-right: -10px;
+}
+
+div div:hover h3{ /* hover hand L */
+  margin-left: -10px;
 }
 
 @keyframes rotate{
