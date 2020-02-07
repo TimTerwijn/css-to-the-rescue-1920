@@ -28,26 +28,31 @@ face{
   grid-row-end: span 3;
 }
 
-hand_l{
-  align-self: center;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
-  margin-top: 111px;
-  z-index: 1000;
-}
-
 plate{
   align-self: end;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+burgerContainer{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin-top: 111px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 3;
-  margin-top: 111px;
 }
 
-burger:hover{
+burgerContainer:hover burger{
+  animation: rotate 10s linear 1;
+  animation-play-state: running;
+}
+
+burgerContainer:hover plate{
   animation: rotate 10s linear 1;
   animation-play-state: running;
 }
@@ -57,25 +62,30 @@ burger:hover{
   to {transform: rotate(360deg); }
 }
 
-
+hand_l{
+  align-self: center;
+  z-index: 1000;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
 
 burger{
   align-self: end;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
-  margin-top: 111px;
   z-index: 999;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
 hand_r{
   justify-self: end;
   align-self: center;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
-  margin-top: 111px;
   z-index: 1000;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
