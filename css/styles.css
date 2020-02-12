@@ -29,6 +29,7 @@ div h3{ /* face */
   grid-row-start: 2;
   grid-row-end: span 3;
   margin: 0;
+  z-index: 1;
 }
 
 div div{ /* burger container */
@@ -40,6 +41,7 @@ div div{ /* burger container */
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 3;
+  margin-top: 111px;
 }
 
 div div h1{ /* SVG plate */
@@ -49,6 +51,7 @@ div div h1{ /* SVG plate */
   grid-row-start: 1;
   grid-row-end: 1;
   margin: 0;
+  z-index: 2;
 }
 
 div div h2{ /* food */
