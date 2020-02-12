@@ -4,7 +4,7 @@ body { /* the grit */
   place-items: center;
 }
 
-label div{ /* each small item you can buy */
+label > div{ /* each small item you can buy */
   display: grid;
   grid-template-columns: auto 120px auto;
   grid-template-rows: auto auto auto auto;
@@ -22,19 +22,25 @@ input:checked ~ div{
   background-color: green;
 }
 
-label div h1{ /* left eye */
+label > div > h1{ /* left eye */
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
   font-size: 1.5em;
   margin: 0;
   align-self: end;
 }
 
-label div h2{ /* right eye */
+label > div > h2{ /* right eye */
   grid-column-start: 3;
   grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
   margin: 0;
 }
 
-label div h3{ /* face */
+label > div > h3{ /* face */
   align-self: top;
   grid-column-start: 2;
   grid-column-end: 2;
@@ -44,7 +50,7 @@ label div h3{ /* face */
   z-index: 1;
 }
 
-label div section{ /* burger container */
+label > div > section{ /* burger container */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -56,7 +62,7 @@ label div section{ /* burger container */
   margin-top: 111px;
 }
 
-label div section h1{ /* SVG plate */
+label > div > section h1{ /* SVG plate */
   align-self: end;
   grid-column-start: 1;
   grid-column-end: 1;
@@ -66,7 +72,7 @@ label div section h1{ /* SVG plate */
   z-index: 2;
 }
 
-label div section h2{ /* food */
+label > div > section h2{ /* food */
   align-self: end;
   z-index: 999;
   grid-column-start: 1;
@@ -76,7 +82,7 @@ label div section h2{ /* food */
   margin: 0;
 }
 
-label div section h3{ /* hand l */
+label > div > section h3{ /* hand l */
   align-self: center;
   z-index: 1000;
   grid-column-start: 1;
@@ -86,7 +92,7 @@ label div section h3{ /* hand l */
   margin: 0;
 }
 
-label div section h4{ /* hand r */
+label > div > section h4{ /* hand r */
   justify-self: end;
   align-self: center;
   z-index: 1000;
@@ -96,7 +102,7 @@ label div section h4{ /* hand r */
   grid-row-end: 1;
 }
 
-label div h4{ /* left eye bot */
+label > div > h4{ /* left eye bot */
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 4;
@@ -105,7 +111,7 @@ label div h4{ /* left eye bot */
   margin: 0;
 }
 
-label div h5{ /* right eye bot */
+label > div > h5{ /* right eye bot */
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 4;
@@ -114,21 +120,31 @@ label div h5{ /* right eye bot */
   margin: 0;
 }
 
-label div section:hover h2{ /* hover food */
+label > div > svg{ /* lazers */
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 1;
+  grid-row-end: span 4;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+label > div > section:hover h2{ /* hover food */
   animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
 
-label div section:hover h1{ /* hover plate */
+label > div > section:hover h1{ /* hover plate */
   animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
 
-label div section:hover h4{ /* hover hand R */
+label > div > section:hover h4{ /* hover hand R */
   margin-right: -10px;
 }
 
-label div section:hover h3{ /* hover hand L */
+label > div > section:hover h3{ /* hover hand L */
   margin-left: -10px;
 }
 
