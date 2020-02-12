@@ -4,7 +4,7 @@ body { /* the grit */
   place-items: center;
 }
 
-body div{ /* each small item you can buy */
+body label div{ /* each small item you can buy */
   display: grid;
   grid-template-columns: auto 120px auto;
   grid-template-rows: auto auto;
@@ -12,18 +12,27 @@ body div{ /* each small item you can buy */
   background: linear-gradient(26deg, rgb(255,63,0) 29%, rgb(13,0,204) 29%, rgb(0,0,0) 100%);
 }
 
-div h1{ /* left eye */
+input{
+  display: none;
+}
+
+input:checked ~ div{
+  background: green;
+  background-color: green;
+}
+
+body label div h1{ /* left eye */
   font-size: 1.5em;
   margin: 0;
 }
 
-div h2{ /* right eye */
+body label div h2{ /* right eye */
   grid-column-start: 3;
   grid-column-end: 3;
   margin: 0;
 }
 
-div h3{ /* face */
+body label div h3{ /* face */
   align-self: top;
   grid-column-start: 2;
   grid-column-end: 2;
@@ -33,7 +42,7 @@ div h3{ /* face */
   z-index: 1;
 }
 
-div section{ /* burger container */
+body label div section{ /* burger container */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -45,7 +54,7 @@ div section{ /* burger container */
   margin-top: 111px;
 }
 
-div section h1{ /* SVG plate */
+body label div section h1{ /* SVG plate */
   align-self: end;
   grid-column-start: 1;
   grid-column-end: 1;
@@ -55,7 +64,7 @@ div section h1{ /* SVG plate */
   z-index: 2;
 }
 
-div section h2{ /* food */
+body label div section h2{ /* food */
   align-self: end;
   z-index: 999;
   grid-column-start: 1;
@@ -65,7 +74,7 @@ div section h2{ /* food */
   margin: 0;
 }
 
-div section h3{ /* hand l */
+body label div section h3{ /* hand l */
   align-self: center;
   z-index: 1000;
   grid-column-start: 1;
@@ -75,7 +84,7 @@ div section h3{ /* hand l */
   margin: 0;
 }
 
-div section h4{ /* hand r */
+body label div section h4{ /* hand r */
   justify-self: end;
   align-self: center;
   z-index: 1000;
@@ -85,21 +94,21 @@ div section h4{ /* hand r */
   grid-row-end: 1;
 }
 
-div section:hover h2{ /* hover food */
+body label div section:hover h2{ /* hover food */
   animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
 
-div section:hover h1{ /* hover plate */
+body label div section:hover h1{ /* hover plate */
   animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
 
-div section:hover h4{ /* hover hand R */
+body label div section:hover h4{ /* hover hand R */
   margin-right: -10px;
 }
 
-div section:hover h3{ /* hover hand L */
+body label div section:hover h3{ /* hover hand L */
   margin-left: -10px;
 }
 
