@@ -4,7 +4,7 @@ body { /* the grit */
   place-items: center;
 }
 
-body div{ /* each item you can buy */
+body div{ /* each small item you can buy */
   display: grid;
   grid-template-columns: auto 120px auto;
   grid-template-rows: auto auto;
@@ -12,7 +12,7 @@ body div{ /* each item you can buy */
 }
 
 div h1{ /* left eye */
-  text-align: right;
+  font-size: 1.5em;
   margin: 0;
 }
 
