@@ -12,9 +12,7 @@ img{
 label > div{ /* each small item you can buy */
   display: grid;
   grid-template-columns: auto 120px auto;
-  grid-template-rows: auto auto auto auto;
   margin-bottom: 10px;
-  background: rgb(255,63,0);
   background: linear-gradient(0deg, rgb(255, 118, 0) 18%, rgb(54, 46, 171) 80%, rgb(0,0,0) 96%);
   border-radius: 0 0 110px 110px;
 }
@@ -27,116 +25,78 @@ input:checked ~ div > svg{
   display: block;
 }
 
-label > div > h1{ /* left eye */
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
+label > div *{
   font-size: 1.5em;
   margin: 0;
-  align-self: end;
-  z-index: 1;
+}
+
+label > div > h1{ /* left eye */
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
 
 label > div > h2{ /* right eye */
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  margin: 0;
-  z-index: 1;
+  grid-column: 3 / 3;
+  grid-row: 1 / 1;
 }
 
 label > div > h3{ /* face */
-  align-self: top;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: span 3;
-  margin: 0;
-  z-index: 1;
+  grid-column: 2 / 2;
+  grid-row: 2 / span 3;
 }
 
 label > div > section{ /* burger container */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  margin: 0;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
   margin-top: 111px;
 }
 
-label > div > section h1{ /* SVG plate */
-  align-self: end;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  margin: 0;
-  z-index: 2;
+label > div > section > *{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
+
+label > div > section h1{ /* SVG plate */}
 
 label > div > section h2{ /* food */
   align-self: end;
-  z-index: 999;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  margin: 0;
 }
 
 label > div > section h3{ /* hand l */
   align-self: center;
-  z-index: 1000;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  margin: 0;
+  z-index: 9;
 }
 
 label > div > section h4{ /* hand r */
   justify-self: end;
   align-self: center;
-  z-index: 1000;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  z-index: 9;
 }
 
 label > div > svg{ /* lazer container */
   display: none;
-  grid-column-start: 1;
-  grid-column-end: span 3;
-  grid-row-start: 1;
-  grid-row-end: span 3;
-  font-size: 1.5em;
-  margin: 0;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+}
+
+label > div > svg > line{
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 label > div > svg > line:nth-child(1), label > div > svg > line:nth-child(2), label > div > svg > line:nth-child(3), label > div > svg > line:nth-child(4), label > div > svg > line:nth-child(5){ /* lazers beams*/
   animation-name: lazers_1;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  
 }
 
 label > div > svg > line:nth-child(6), label > div > svg > line:nth-child(7), label > div > svg > line:nth-child(8), label > div > svg > line:nth-child(9){
   animation-name: lazers_2;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
 }
 
-label > div > section:hover h2{ /* hover food */
-  animation: rotate 10s linear infinite;
-  animation-play-state: running;
-}
-
-label > div > section:hover h1{ /* hover plate */
+label > div > section:hover h2, label > div > section:hover h1{ /* hover food */
   animation: rotate 10s linear infinite;
   animation-play-state: running;
 }
@@ -151,43 +111,31 @@ label > div > section:hover h3{ /* hover hand L */
 
 @keyframes rotate{
   from {transform: rotate(0deg); }
-  to {transform: rotate(360deg); }
+  to   {transform: rotate(360deg); }
 }
 
 @keyframes lazers_1{
   0%   {stroke: red; stroke-width: 2;}
-  12%   {stroke-width: 0;}
+  12%  {stroke-width: 0;}
   25%  {stroke: orange; stroke-width: 2;}
-  38%   {stroke-width: 0;}
+  38%  {stroke-width: 0;}
   50%  {stroke: yellow; stroke-width: 2;}
-  62%   {stroke-width: 0;}
+  62%  {stroke-width: 0;}
   75%  {stroke: orange; stroke-width: 2;}
-  88%   {stroke-width: 0;}
+  88%  {stroke-width: 0;}
   100% {stroke: red; stroke-width: 2;}
 }
 
 @keyframes lazers_2{
   0%   {stroke: red; stroke-width: 0;}
-  12%   {stroke-width: 2;}
+  12%  {stroke-width: 2;}
   25%  {stroke: orange; stroke-width: 0;}
-  38%   {stroke-width: 2;}
+  38%  {stroke-width: 2;}
   50%  {stroke: yellow; stroke-width: 0;}
-  62%   {stroke-width: 2;}
+  62%  {stroke-width: 2;}
   75%  {stroke: orange; stroke-width: 0;}
-  88%   {stroke-width: 2;}
+  88%  {stroke-width: 2;}
   100% {stroke: red; stroke-width: 0;}
-}
-
-@keyframes lazer1{
-  0%   {display: block;}
-  50%  {display: none;}
-  100% {display: block;}
-}
-
-@keyframes lazer2{
-  0%   {display: none;}
-  50%  {display: block;}
-  100% {display: none;}
 }
 
 @media (max-width: 460px) {
