@@ -123,7 +123,7 @@ label > div > h5{ /* right eye bot */
   z-index: 1;
 }
 
-label > div > svg{ /* lazers */
+label > div > svg{ /* lazer container */
   display: none;
   grid-column-start: 1;
   grid-column-end: span 3;
@@ -131,12 +131,11 @@ label > div > svg{ /* lazers */
   grid-row-end: span 4;
   font-size: 1.5em;
   margin: 0;
-  animation: lazers_rotate 10s linear infinite;
-  animation-play-state: running;
+  
 }
 
-label > div > svg > line{ /* lazers */
-  animation-name: lazers_colour;
+label > div > svg > line{ /* lazers beams*/
+  animation-name: lazers;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
@@ -164,20 +163,16 @@ label > div > section:hover h3{ /* hover hand L */
   to {transform: rotate(360deg); }
 }
 
-@keyframes lazers_rotate{
-  0%   {transform: rotate(0deg);}
-  25%   {transform: rotate(-10deg);}
-  50%   {transform: rotate(0deg);}
-  75%   {transform: rotate(10deg);}
-  100% {transform: rotate(0deg);}
-}
-
-@keyframes lazers_colour{
-  0%   {stroke: red;}
-  25%  {stroke: orange;}
-  50%  {stroke: yellow;}
-  75%  {stroke: orange;}
-  100% {stroke: red;}
+@keyframes lazers{
+  0%   {stroke: red; stroke-width: 2;}
+  24%   {stroke-width: 0;}
+  25%  {stroke: orange; stroke-width: 2;}
+  49%   {stroke-width: 0;}
+  50%  {stroke: yellow; stroke-width: 2;}
+  74%   {stroke-width: 0;}
+  75%  {stroke: orange; stroke-width: 2;}
+  99%   {stroke-width: 0;}
+  100% {stroke: red; stroke-width: 2;}
 }
 
 @media (max-width: 460px) {
