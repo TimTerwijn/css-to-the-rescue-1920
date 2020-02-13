@@ -16,6 +16,7 @@ label > div{ /* each small item you can buy */
   margin-bottom: 10px;
   background: rgb(255,63,0);
   background: linear-gradient(26deg, rgb(255,63,0) 29%, rgb(13,0,204) 29%, rgb(0,0,0) 100%);
+  border-radius: 0 0 110px 110px;
 }
 
 input{
