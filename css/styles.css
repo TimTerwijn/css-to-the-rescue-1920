@@ -15,7 +15,7 @@ label > div{ /* each small item you can buy */
   grid-template-rows: auto auto auto auto;
   margin-bottom: 10px;
   background: rgb(255,63,0);
-  background: linear-gradient(26deg, rgb(255,63,0) 29%, rgb(13,0,204) 29%, rgb(0,0,0) 100%);
+  background: linear-gradient(0deg, rgb(255, 118, 0) 18%, rgb(54, 46, 171) 80%, rgb(0,0,0) 96%);
   border-radius: 0 0 110px 110px;
 }
 
@@ -217,5 +217,11 @@ label > div > section:hover h3{ /* hover hand L */
 @media (min-width: 1115px){
   body {
     grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+@media (min-width: 1332px){
+  body {
+    grid-template-columns: auto auto auto auto auto auto;
   }
 }
