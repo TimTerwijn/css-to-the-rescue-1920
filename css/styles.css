@@ -108,32 +108,12 @@ label > div > section h4{ /* hand r */
   grid-row-end: 1;
 }
 
-label > div > h4{ /* left eye bot */
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 4;
-  font-size: 1.5em;
-  margin: 0;
-  z-index: 1;
-}
-
-label > div > h5{ /* right eye bot */
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 4;
-  grid-row-end: 4;
-  font-size: 1.5em;
-  margin: 0;
-  z-index: 1;
-}
-
 label > div > svg{ /* lazer container 1*/
   display: none;
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row-start: 1;
-  grid-row-end: span 4;
+  grid-row-end: span 3;
   font-size: 1.5em;
   margin: 0;
 }
