@@ -17,9 +17,8 @@ input{
   display: none;
 }
 
-input:checked ~ div{
-  background: green;
-  background-color: green;
+input:checked ~ div > svg{
+  display: block;
 }
 
 label > div > h1{ /* left eye */
@@ -30,6 +29,7 @@ label > div > h1{ /* left eye */
   font-size: 1.5em;
   margin: 0;
   align-self: end;
+  z-index: 1;
 }
 
 label > div > h2{ /* right eye */
@@ -38,6 +38,7 @@ label > div > h2{ /* right eye */
   grid-row-start: 1;
   grid-row-end: 1;
   margin: 0;
+  z-index: 1;
 }
 
 label > div > h3{ /* face */
@@ -109,6 +110,7 @@ label > div > h4{ /* left eye bot */
   grid-row-end: 4;
   font-size: 1.5em;
   margin: 0;
+  z-index: 1;
 }
 
 label > div > h5{ /* right eye bot */
@@ -118,16 +120,25 @@ label > div > h5{ /* right eye bot */
   grid-row-end: 4;
   font-size: 1.5em;
   margin: 0;
+  z-index: 1;
 }
 
 label > div > svg{ /* lazers */
-  display: block;
+  display: none;
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row-start: 1;
   grid-row-end: span 4;
   font-size: 1.5em;
   margin: 0;
+  animation: lazers_rotate 10s linear infinite;
+  animation-play-state: running;
+}
+
+label > div > svg > line{ /* lazers */
+  animation-name: lazers_colour;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 label > div > section:hover h2{ /* hover food */
@@ -151,6 +162,22 @@ label > div > section:hover h3{ /* hover hand L */
 @keyframes rotate{
   from {transform: rotate(0deg); }
   to {transform: rotate(360deg); }
+}
+
+@keyframes lazers_rotate{
+  0%   {transform: rotate(0deg);}
+  25%   {transform: rotate(-10deg);}
+  50%   {transform: rotate(0deg);}
+  75%   {transform: rotate(10deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes lazers_colour{
+  0%   {stroke: red;}
+  25%  {stroke: orange;}
+  50%  {stroke: yellow;}
+  75%  {stroke: orange;}
+  100% {stroke: red;}
 }
 
 @media (max-width: 460px) {
