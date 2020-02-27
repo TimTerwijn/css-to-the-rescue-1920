@@ -38,12 +38,12 @@
 
   label > div > span{ /* price */
     visibility: hidden;
-    width: 120px;
-    background-color: white;
+    width: 88px;
+    background-color: wheat;
     text-align: center;
     padding: 5px 0;
-    border-radius: 5px;
     border: solid black 2px;
+    border-radius: 0 0 110px 110px;
 
     /* Position the tooltip */
     position: absolute;
