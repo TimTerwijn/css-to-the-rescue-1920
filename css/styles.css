@@ -10,7 +10,7 @@
     animation-play-state: running;
   }
 
-  img{
+  img{ /* stop images behaving like images */
     pointer-events: none;
     user-select: none;
   }
@@ -23,17 +23,35 @@
     border-radius: 0 0 110px 110px;
   }
 
-  input{
+  input{ /* make checkbox hidden */
     display: none;
   }
 
-  input:checked ~ div > svg{
+  input:checked ~ div > svg{ /* show lazerbeams onclick */
     display: block;
   }
 
-  label > div *{
+  label > div *{ /* make all h1~h6 items a div */
     font-size: 1.5em;
     margin: 0;
+  }
+
+  label > div > span{ /* price */
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: solid black 2px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  label > div:hover span{ /* show price */
+    visibility: visible;
   }
 
   label > div > h1{ /* left eye */
@@ -93,29 +111,31 @@
     grid-row: 1 / span 3;
   }
 
-  label > div > svg > line{
+  label > div > svg > line{ /* lazerbeam animation setings */
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
 
+  /* lazerbeam animation setings */
   label > div > svg > line:nth-child(1), label > div > svg > line:nth-child(2), label > div > svg > line:nth-child(3), label > div > svg > line:nth-child(4), label > div > svg > line:nth-child(5){ /* lazers beams*/
     animation-name: lazers_1;
   }
 
+  /* lazerbeam animation setings */
   label > div > svg > line:nth-child(6), label > div > svg > line:nth-child(7), label > div > svg > line:nth-child(8), label > div > svg > line:nth-child(9){
     animation-name: lazers_2;
   }
 
-  label > div > section:hover h2, label > div > section:hover h1{ /* hover food */
+  label > div:hover section>h2, label > div:hover section>h1{ /* hover food */
     animation: rotate 10s linear infinite;
     animation-play-state: running;
   }
 
-  label > div > section:hover h4{ /* hover hand R */
+  label > div:hover section>h4{ /* hover hand R */
     margin-right: -10px;
   }
 
-  label > div > section:hover h3{ /* hover hand L */
+  label > div:hover section>h3{ /* hover hand L */
     margin-left: -10px;
   }
 
@@ -193,6 +213,10 @@
 @media print {
   body {
     grid-template-columns: auto auto auto;
+  }
+
+  span{ /* show price */
+    visibility: visible;
   }
 
   body > label:nth-last-child(1), body > label:nth-last-child(2), body > label:nth-last-child(3){
