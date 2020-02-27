@@ -44,24 +44,20 @@
     padding: 5px 0;
     border: solid black 2px;
     border-radius: 0 0 110px 110px;
-
-    /* Position the tooltip */
     position: absolute;
-    z-index: 1;
   }
 
   label > div:hover span{ /* show price */
     visibility: visible;
   }
 
-  label > div > h1{ /* left eye */
+  label > div *{ /* left eye */
     grid-column: 1 / 1;
     grid-row: 1 / 1;
   }
 
   label > div > h2{ /* right eye */
     grid-column: 3 / 3;
-    grid-row: 1 / 1;
     justify-self: end;
   }
 
@@ -78,13 +74,6 @@
     grid-row: 3 / 3;
     margin-top: 111px;
   }
-
-  label > div > section > *{
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-  }
-
-  label > div > section h1{ /* SVG plate */}
 
   label > div > section h2{ /* food */
     align-self: end;
