@@ -36,5 +36,8 @@ Hover any item to see the prices and animations.
 Click any item to see the awesome **lazerbeams**.
 Print the page to print the awesome menu with different styling than the main page.  
 
-## Roadmap
-* ~~Search for a monster from the osrsbox.com api.~~
+## WishList
+* Faces wobbles
+* More lazers
+* Flipping cards
+* Eyes following mouse
