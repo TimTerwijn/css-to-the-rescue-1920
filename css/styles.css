@@ -1,7 +1,6 @@
 
   body { /* the grit */
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
     place-items: center;
     
     /* background */
@@ -206,11 +205,11 @@
     animation: none;
   }
 
-  span{ /* show price */
+  label > div > span{
     display: inline;
   }
 
-  body > label:nth-last-child(1), body > label:nth-last-child(2), body > label:nth-last-child(3){
+  body > label:nth-last-child(1), body > label:nth-last-child(2), body > label:nth-last-child(3){ /* hide last items */
     display: none;
   }
 
