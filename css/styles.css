@@ -37,7 +37,7 @@
   }
 
   label > div > span{ /* price */
-    visibility: hidden;
+    display: none;
     width: 88px;
     background-color: wheat;
     text-align: center;
@@ -48,7 +48,7 @@
   }
 
   label > div:hover span{ /* show price */
-    visibility: visible;
+    display: inline;
   }
 
   label > div *{ /* left eye */
@@ -202,10 +202,12 @@
 @media print {
   body {
     grid-template-columns: auto auto auto;
+    background-color: white;
+    animation: none;
   }
 
   span{ /* show price */
-    visibility: visible;
+    display: inline;
   }
 
   body > label:nth-last-child(1), body > label:nth-last-child(2), body > label:nth-last-child(3){
