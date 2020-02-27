@@ -3,6 +3,11 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     place-items: center;
+    
+    /* background */
+    background-color: black;
+    animation: background 90s linear infinite;
+    animation-play-state: running;
   }
 
   img{
@@ -78,6 +83,10 @@
     z-index: 9;
   }
 
+  label > div > p{ /* food price */
+    margin-top: -48px;
+  }
+
   label > div > svg{ /* lazer container */
     display: none;
     grid-column: 1 / span 3;
@@ -113,6 +122,12 @@
 @keyframes rotate{
   from {transform: rotate(0deg); }
   to   {transform: rotate(360deg); }
+}
+
+@keyframes background{
+  30%  {background-color: orange;}
+  50% {background-color: cyan;}
+  75%  {background-color: orange;}
 }
 
 @keyframes lazers_1{
