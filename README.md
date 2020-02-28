@@ -1,7 +1,7 @@
 # The creep factorr
 
 ## Github pages:
-https://timterwijn.github.io/web-app-from-scratch-1920/
+https://timterwijn.github.io/css-to-the-rescue-1920/
 
 ## Description
 I wanted to create a very weird restaurant menu. It needed eyes, animations and of course **lazerbeams**.
@@ -10,10 +10,10 @@ I wanted to create a very weird restaurant menu. It needed eyes, animations and 
 ![Logo](/img/logo.jpg)
 
 ## Table of contents
-* [Struggles](#struggles)
-* [How to use](#how-to-use)
-* [Roadmap](#roadmap)
 * [Limits](#limits)
+* [Learning Goals](#learning-goals)
+* [How to use](#how-to-use)
+* [WishList](#wishList)
 
 ## Limits
 ### For this project I decided to limit myself with the following things:
