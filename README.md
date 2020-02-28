@@ -7,7 +7,10 @@ https://timterwijn.github.io/css-to-the-rescue-1920/
 I wanted to create a very weird restaurant menu. It needed eyes, animations and of course **lazerbeams**.
 
 ## Logo
+### Site
 ![Logo](/img/logo.PNG)
+### Print CSS
+![Logo](/img/logo2.PNG)
 
 ## Table of contents
 * [Limits](#limits)
